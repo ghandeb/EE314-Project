@@ -24,8 +24,17 @@ imshow(I2);
 d2 = imfill(I2, 'holes');
 figure, imshow(d2); 
 
-kr_25=imfindcircles(d2,[10 15],'ObjectPolarity','bright')
+%rad25=
+%rad50=
+%rad100=
 
-kr_50=imfindcircles(d2,[10 17],'ObjectPolarity','bright')
+kr_25=imfindcircles(d2,[10 rad25],'ObjectPolarity','bright')
 
-tl_1=imfindcircles(d2,[10 18],'ObjectPolarity','bright') 
+kr_50=imfindcircles(d2,[10 rad50],'ObjectPolarity','bright')
+
+tl_1=imfindcircles(d2,[10 rad100],'ObjectPolarity','bright') 
+
+ybes=numel(kr_25)
+elli=numel(kr_50)-ybes
+bir=numel(tl_1)-elli
+
