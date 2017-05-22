@@ -2,7 +2,7 @@ clc
 close all
 clear all
 
-a=imread('2.bmp');
+a=imread('4.bmp');
 I=rgb2gray(a)
 
 BW1 = edge(I,'sobel');
