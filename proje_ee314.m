@@ -72,4 +72,10 @@ end
 
 c=a+b
 
+c=logical(c)
+c=double(c)
+
 imshow(c)
+
+
+%x=findcircles(c,3,0)
