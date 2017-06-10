@@ -2,7 +2,7 @@ clc
 close all
 clear all
 
-a=imread('1.bmp');
+a=imread('nonoise1.png');
 I=rgb2gray(a)
 
 BW1 = edge(I,'sobel');
@@ -42,11 +42,11 @@ figure, imshow(d2);
 % reference squares are not used while defining the radii, some approximate
 % values are assigned instead.
 
-kr_25=imfindcircles(d2,[10 16],'ObjectPolarity','bright','EdgeThreshold',0.1)
+kr_25=imfindcircles(d2,[1 rad25],'ObjectPolarity','bright','EdgeThreshold',0.1)
 
-kr_50=imfindcircles(d2,[10 17],'ObjectPolarity','bright','EdgeThreshold',0.1)
+kr_50=imfindcircles(d2,[1 rad50],'ObjectPolarity','bright','EdgeThreshold',0.1)
 
-tl_1=imfindcircles(d2,[10 20],'ObjectPolarity','bright','EdgeThreshold',0.2) 
+tl_1=imfindcircles(d2,[1 rad100],'ObjectPolarity','bright','EdgeThreshold',0.2) 
 
 ybes=numel(kr_25)/2
 elli=numel(kr_50)/2-ybes

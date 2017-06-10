@@ -6,3 +6,6 @@
 
 3. R. Dhanabal, S. K. Sahoo, V. Bharathi, K. Dowluri, B. S. R. P. Varma and V. Sasiraju, "FPGA based image processing unit usage in coin detection and counting," 2015 International Conference on Circuits, Power and Computing Technologies [ICCPCT-2015], Nagercoil, 2015, pp.
  1-5 doi: 10.1109/ICCPCT.2015.7159440
+
+4. [Circle Detection Using Hough Transforms
+Documentation by Jaroslav Borovicka](http://www.borovicka.org/files/research/bristol/hough-report.pdf)
