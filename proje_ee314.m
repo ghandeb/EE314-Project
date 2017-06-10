@@ -45,18 +45,31 @@ title('Original                                   Binarized');
 
 %Edge detection
 
-a= zeros(320,240)
+
+sob=[-1 0 1; -2 0 2; -1 0 1]
+
+a=conv2(sob,bin)
 
 for i=1:rows
-    for j=1:cols-1
-        if bin(i,j)==1 & bin(i,j+1)==1
-            a(i,j+1)=0
-        else
-            a(i,j+1)=bin(i,j+1)
+    for j=1:cols
+        if a(i,j)~=0
+            a(i,j)=1
         end
     end
 end
 
+sb=transpose(sob)
 
+b=conv2(sb,bin)
 
+for i=1:rows
+    for j=1:cols
+        if b(i,j)~=0
+            b(i,j)=1
+        end
+    end
+end
 
+c=a+b
+
+imshow(c)
